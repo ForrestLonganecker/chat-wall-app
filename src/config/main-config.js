@@ -19,4 +19,4 @@ module.exports = {
     }));
     app.use(bodyParser.urlencoded({ extended: true }));
   }
-}
+};
