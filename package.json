@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.0.0",
     "ejs": "^2.6.1",
     "express": "^4.17.0",
     "express-session": "^1.16.1",
@@ -22,6 +23,7 @@
     "sequelize-cli": "^5.4.0"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
     "faker": "^4.1.0",
     "jasmine": "^3.4.0",
     "morgan": "^1.9.1"
