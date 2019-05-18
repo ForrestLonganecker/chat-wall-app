@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wall Talk</title>
+    <!-- stylesheetlink -->
+  </head>
+  <body>
+    <header>
+      <h1>Sign Up</h1>
+    </header>
+    <main>
+      <h2>Register to a new account to start chatting!</h2>
+
+      <form action="/users" method="post">
+        
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp">email address must be a valid address</small>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" aria-describedby="passwordHelp" placeholder="Enter password">
+          <small id="passwordHelp">password must match confirmation below</small>
+        </div>
+
+        <div>
+          <label for="passwordConfirmation">Password confirmation</label>
+          <input type="passwordConfirmation" name="password" aria-describedby="passwordHelp" placeholder="Enter password confirmation">
+        </div>
+
+        <button type="submit">Sign up</button>
+      </form>
+    </main>
+  </body>
+</html>
