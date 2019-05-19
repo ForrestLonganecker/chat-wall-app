@@ -31,8 +31,14 @@ To run the tests stay in navigate to the same directory as above and run:
 
 If I had more time to spend on this project I would like to make the validation errors pop up and have the ability to close them.
 
-I would also implement more of the CRUD functionality for the posts and also put authorization for posts.
+As a user I want to be able to edit a post that I have made or delete it.
+
+As a user I want to be the only one who can delete/edit my own posts.
+
+As a user I would like to see the name/email associated with a message so I know who is saying what.
 
 I would change the format of the styling and adjust the color scheme to make it more interesting to look at.
 
 I have spent the bulk of the time laying out the groundwork so the major structure of the app is created. Now it will just be adding more functionality to make it feature rich.
+
+I would also want to 
