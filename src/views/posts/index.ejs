@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wall Talk</title>
-    <!-- stylesheetlink -->
-  </head>
+  <% include ../static/partials/head.ejs %>
   <body>
     <header>
       <h1>The Wall</h1>
@@ -30,16 +25,16 @@
         </form>
       <% } %>
 
-      <ul>
+      <div>
         <% if(posts){ %>
           <% posts.forEach((post) => { %>
-            <li>
+            <section>
               <h4><%= post.title %></h4>
               <p><%= post.content %></p>
-            </li>
+            <section>
           <% }) %>
         <% } %>
-      </ul>
+      </div>
     </main>
   </body>
 </html>

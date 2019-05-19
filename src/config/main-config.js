@@ -27,5 +27,6 @@ module.exports = {
     app.use(flash());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(expressValidator());
+    app.use(express.static(path.join(__dirname, '..', 'assets')));
   }
 };

@@ -1,0 +1,16 @@
+html {
+  background-color: antiquewhite;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  text-align: center;
+}
+
+nav > a {
+  margin-left: 20px;
+}
