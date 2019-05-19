@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wall Talk</title>
+    <!-- stylesheetlink -->
+  </head>
+  <body>
+    <header>
+      <h1>The Wall</h1>
+      <nav>
+        <% if(currentUser) { %>
+          <a href='/users/sign_out'>Sign out</a>
+        <% } else { %>
+          <a href='/users/sign_up'>Sign up</a>
+          <a href='/users/sign_in_form'>Sign in</a>
+        <% } %>
+      </nav>
+    </header>
+    <main>
+      <% include ../static/partials/messages.ejs %>
+
+      <h2>Start sharing on the Wall</h2>
+
+      <ul>
+        <% if(posts){ %>
+          <% posts.forEach((post) => { %>
+            <li>
+              <h4><%= post.title %></h4>
+              <p><%= post.content %></p>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+    </main>
+  </body>
+</html>
