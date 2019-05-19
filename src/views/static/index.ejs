@@ -8,7 +8,15 @@
   </head>
   <body>
     <header>
-      <h1>This is the "header"</h1>
+      <h1>Wall Talk</h1>
+      <nav>
+        <% if(currentUser) { %>
+          <a href='/users/sign_out'>Sign out</a>
+        <% } else { %>
+          <a href='/users/sign_up'>Sign up</a>
+          <a href='/users/sign_in_form'>Sign in</a>
+        <% } %>
+      </nav>
     </header>
     <main>
       <div>

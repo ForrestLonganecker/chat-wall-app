@@ -4,6 +4,8 @@ const viewsFolder = path.join(__dirname, '..', 'views');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const expressValidator = require('express-validator');
+const flash = require('express-flash');
 const passportConfig = require('./passport-config');
 
 module.exports = {
@@ -22,6 +24,8 @@ module.exports = {
       res.locals.currentUser = req.user;
       next();
     })
+    app.use(flash());
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(expressValidator());
   }
 };

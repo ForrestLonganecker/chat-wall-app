@@ -28,13 +28,24 @@ describe('routes: users', () => {
     // END USER GET SIGN UP 
   });
 
+  describe('GET /users/sign_in_form', () => {
+    it('should render a view with a sign in form', (done) => {
+      request.get(`${base}sign_in_form`, (err, res, body) => {
+        expect(err).toBeNull();
+        expect(body).toContain('Sign In');
+        done();
+      });
+    });
+  });
+
   describe('POST /users/create', () => {
     it('should create a new user and redirect', (done) => {
       const options = {
-        url: base,
+        url: `${base}create`,
         form: {
           email: 'chatty@talk.com',
-          password: '123456'
+          password: '123456',
+          passwordConfirmation: '123456'
         }
       }
 
@@ -55,7 +66,7 @@ describe('routes: users', () => {
 
     it('should not create a new user with invalid attributes and redirect', (done) => {
       request.post({
-        url: base,
+        url: `${base}create`,
         form: {
           email: 'nada',
           password: '123456'
@@ -75,7 +86,6 @@ describe('routes: users', () => {
     });
     // END USER POST CREATE
   })
-
   
   // END OF USER INTEGRATION TESTS
 })
