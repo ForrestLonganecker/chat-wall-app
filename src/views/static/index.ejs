@@ -11,6 +11,7 @@
       <h1>Wall Talk</h1>
       <nav>
         <% if(currentUser) { %>
+          <a href='/posts'>The Wall</a>
           <a href='/users/sign_out'>Sign out</a>
         <% } else { %>
           <a href='/users/sign_up'>Sign up</a>

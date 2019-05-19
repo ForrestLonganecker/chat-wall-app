@@ -1,6 +1,6 @@
 const request = require('request');
 const server = require('../../src/server');
-const base = 'http://localhost:3000/posts';
+const base = 'http://localhost:3000/posts/';
 const User = require('../../src/db/models').User;
 const Post = require('../../src/db/models').Post;
 const sequelize = require('../../src/db/models/index').sequelize;
@@ -52,6 +52,35 @@ describe('routes: users', () => {
         done();
       });
     });
+    // END GET POSTS
+  });
+
+  describe('POST /posts/create', () => {
+    it('should create a new post and add it to the wall', (done) => {
+      const options = {
+        url: `${base}create`,
+        form: {
+          title: 'Hello',
+          content: 'talk talk',
+          userId: this.user.id
+        }
+      }
+      
+      request.post(options, (err, res, body) => {
+        Post.findOne({where: {title: 'Hello'}})
+        .then((post) => {
+          expect(post).not.toBeNull();
+          expect(post.content).toBe('talk talk');
+          expect(post.userId).toBe(this.user.id);
+          done();
+        })
+        .catch((err) => {
+          console.log(err);
+          done();
+        });
+      });
+    });
+    // END CREATE POST
   });
 
 // END POST SPEC TEST
