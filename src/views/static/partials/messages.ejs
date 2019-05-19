@@ -1,0 +1,14 @@
+<% if(messages.error || messages.notice) { %>
+  <div class="alert" role="alert">
+    <% if(messages.error) { %>
+      Validation errors:
+      <ul>
+        <% messages.error.forEach((err) => { %>
+          <li><%= `${err.errors[0].type} ${err.errors[0].message}` %></li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+<p><%= messages.notice %></p>
+    <% } %>
+  </div>
+<% } %>
