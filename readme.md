@@ -11,21 +11,21 @@ This is a Node.js app built with the Express framework. Tests are written with J
 1. make sure you have [npm](https://www.npmjs.com/get-npm) and [node](https://nodejs.org/en/download/) installed
 
 2. To start this app navigate into the root directory:  
-"$ cd path/to/chat-wall-app"  
+`$ cd path/to/chat-wall-app`  
 
 and run:  
-"$ npm start"  
+`$ npm start`  
 
 The app should now be running at http://localhost:3000/
 
 3. To run tests you will first need to install jasmine as a dev dependency, navigate to the root directory of the app:  
-"$ cd path/to/chat-wall-app"  
+`$ cd path/to/chat-wall-app`  
 
 and run:  
-"$ npm install --save-dev jasmine" 
+`$ npm install --save-dev jasmine` 
 
 To run the tests stay in navigate to the same directory as above and run:  
-"$ npm test"  
+`$ npm test`  
 
 ---
 
