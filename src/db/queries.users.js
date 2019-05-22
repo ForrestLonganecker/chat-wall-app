@@ -14,6 +14,10 @@ module.exports = {
       callback(null, user);
     })
     .catch((err) => {
+      if(err.name === 'SequelizeUniqueConstraintError') {
+        err.param = 'Email address';
+        err.msg = 'must be unique';
+      }
       callback(err);
     })
   },
