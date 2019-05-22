@@ -12,12 +12,12 @@ This is a Node.js app built with the Express framework. Tests are written with J
 
 2. you will also need to create a .env file in the root directory and store an environment variable called `cookieSecret` there.  
 
-`$ cd path/to/chat-wall-app`
+`$ cd path/to/chat-wall-app`  
 `$ touch .env`
 
-inside the `.env` file:
+inside the `.env` file:  
 
-`cookieSecret="anything you want here"`
+`cookieSecret="anything you want here"`  
 
 3. To start this app navigate into the root directory:  
 `$ cd path/to/chat-wall-app`  
