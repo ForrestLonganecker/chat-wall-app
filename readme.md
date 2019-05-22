@@ -10,7 +10,16 @@ This is a Node.js app built with the Express framework. Tests are written with J
 
 1. make sure you have [npm](https://www.npmjs.com/get-npm) and [node](https://nodejs.org/en/download/) installed
 
-2. To start this app navigate into the root directory:  
+2. you will also need to create a .env file in the root directory and store an environment variable called `cookieSecret` there.  
+
+`$ cd path/to/chat-wall-app`
+`$ touch .env`
+
+inside the `.env` file:
+
+`cookieSecret="anything you want here"`
+
+3. To start this app navigate into the root directory:  
 `$ cd path/to/chat-wall-app`  
 
 and run:  
@@ -18,7 +27,7 @@ and run:
 
 The app should now be running at http://localhost:3000/
 
-3. To run tests you will first need to install jasmine as a dev dependency, navigate to the root directory of the app:  
+4. To run tests you will first need to install jasmine as a dev dependency, navigate to the root directory of the app:  
 `$ cd path/to/chat-wall-app`  
 
 and run:  
