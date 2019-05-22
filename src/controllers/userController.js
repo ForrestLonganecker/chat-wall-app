@@ -9,12 +9,10 @@ module.exports = {
     let newUser = {
       email: req.body.email,
       password: req.body.password,
-      // passwordConfirmation: req.body.passwordConfirmation
     };
 
     userQueries.createUser(newUser, (err, user) => {
       if(err){
-        console.log('{CONTROLLER 1} IF/ERR: ', err);
         req.flash('error', err);
         res.redirect('/users/sign_up');
       } else {
